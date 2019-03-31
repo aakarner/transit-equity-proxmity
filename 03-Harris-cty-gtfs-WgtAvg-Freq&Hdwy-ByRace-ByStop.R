@@ -217,13 +217,18 @@ plot_wmd <- barplot(final.data_bystop$data_wmd, names.arg = final.data_bystop$ra
                     border = "black",
                     ylim = c(0, 60))
 legend("topright", c("Before", "After"), fill = c("orange", "blue"))
+<<<<<<< HEAD
 text(plot_wmd, final.data_bystop$data_wmd + 2*sign(final.data_bystop$data_wmd), labels=round(final.data_bystop$data_wmd, 2), xpd=TRUE)
+=======
+text(plot_wmd, final.data_bystop$data_wmd + 2*sign(final.data_bystop$data_wmd), labels=round(final.data$data_wmd, 2), xpd=TRUE)
+>>>>>>> b8bf9c7428b8c32d141c53d2523ec32e8d20e720
 
 
 
 
 #SUM POPULATIONS WITH ANY TRANSIT ACCESS BY RACE BEFORE/AFTER
 
+<<<<<<< HEAD
 stop_buff_all_pre <- st_union(pre_stop_buffer)
 stop_buff_all_post <- st_union(post_stop_buffer)
 
@@ -285,10 +290,43 @@ before_after_1 <-c('Before', 'After', 'Before', 'After', 'Before', 'After', 'Bef
 race_1 <-c('White', 'White', 'Black', 'Black', 'Asian', 'Asian', 'LatinX', 'LatinX')
 
 final.data_popsums <-data.frame(race_1, before_after_1, pop_est_by_race, pop_numeric)
+=======
+#remove rows with duplicate geometries
+index_white_pre <- which(duplicated(pre_stop_acs_int_white$geometry))
+white_nodup_pre <- pre_stop_acs_int_white[-index_white_pre, ]
+index_white_post <- which(duplicated(post_stop_acs_int_white$geometry))
+white_nodup_post <- post_stop_acs_int_white[-index_white_post, ]
+
+index_black_pre <- which(duplicated(pre_stop_acs_int_black$geometry))
+black_nodup_pre <- pre_stop_acs_int_black[-index_black_pre, ]
+index_black_post <- which(duplicated(post_stop_acs_int_black$geometry))
+black_nodup_post <- post_stop_acs_int_black[-index_black_post, ]
+
+index_asian_pre <- which(duplicated(pre_stop_acs_int_asian$geometry))
+asian_nodup_pre <- pre_stop_acs_int_asian[-index_asian_pre, ]
+index_asian_post <- which(duplicated(post_stop_acs_int_asian$geometry))
+asian_nodup_post <- post_stop_acs_int_asian[-index_asian_post, ]
+
+index_latin_pre <- which(duplicated(pre_stop_acs_int_latin$geometry))
+latin_nodup_pre <- pre_stop_acs_int_latin[-index_latin_pre, ]
+index_latin_post <- which(duplicated(post_stop_acs_int_latin$geometry))
+latin_nodup_post <- post_stop_acs_int_latin[-index_latin_post, ]
+
+#Put population sum data in dataframe
+pop_est_by_race <-c(sum(white_nodup_pre$pop_est_new), sum(white_nodup_post$pop_est_new), 
+                    sum(black_nodup_pre$pop_est_new), sum(black_nodup_post$pop_est_new), 
+                    sum(asian_nodup_pre$pop_est_new), sum(asian_nodup_post$pop_est_new), 
+                    sum(latin_nodup_pre$pop_est_new), sum(latin_nodup_post$pop_est_new))
+before_after_1 <-c('Before', 'After', 'Before', 'After', 'Before', 'After', 'Before', 'After')
+race_1 <-c('White', 'White', 'Black', 'Black', 'Asian', 'Asian', 'LatinX', 'LatinX')
+
+final.data_popsums <-data.frame(race_1, before_after_1, pop_est_by_race)
+>>>>>>> b8bf9c7428b8c32d141c53d2523ec32e8d20e720
 
 final.data_popsums
 
 #plot population sum data
+<<<<<<< HEAD
 
 plot_popsums <- barplot(final.data_popsums$pop_numeric, 
                         names.arg = final.data_popsums$race_1, 
@@ -338,6 +376,19 @@ legend("topleft", c("Before", "After"), fill = c("yellow", "pink"))
 #final.data_popsums <-data.frame(race_1, before_after_1, pop_est_by_race)
 
 #final.data_popsums
+=======
+plot_popsums <- barplot(as.numeric(final.data_popsums$pop_est_by_race), 
+                    names.arg = final.data_popsums$race_1, 
+                    xlab = "Race", 
+                    ylab = "Total Population within 400m of Bus Stop", 
+                    col = c("yellow","pink"), 
+                    main = "Population By Race w/in 400m of Bus Stop Before/After System Reimagining", 
+                    border = "black",
+                    ylim = c(0,5000000))
+legend("topleft", c("Before", "After"), fill = c("yellow", "pink"))
+text(plot_wmd, final.data_popsums$pop_est_by_race + 2*sign(final.data_popsums$pop_est_by_race), 
+     labels=round(final.data_popsums$pop_est_by_race, 2), xpd=TRUE)
+>>>>>>> b8bf9c7428b8c32d141c53d2523ec32e8d20e720
 
 #plot population sum data
 #plot_popsums <- barplot(as.numeric(final.data_popsums$pop_est_by_race), 
