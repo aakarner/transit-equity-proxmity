@@ -9,6 +9,7 @@ library(tidycensus)
 library(sf)
 library(ggplot2)
 library(ggthemes)
+census_api_key("3a277651e6ec078927e10356269269b3698a0cfa")
 
 # Define a map-appropriate ggplot theme
 # See: http://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html
@@ -27,8 +28,8 @@ no_axes <- theme(
 # Here, we employ changes in average headways at the stop level as a 
 # basis for comparison.
 
-stops_pre <- inner_join(pre_st_gtfs$stops_frequency_df, 
-                        pre_st_gtfs$stops_df)
+stops_pre <- inner_join(pre_sr_gtfs$stops_frequency_df, 
+                        pre_sr_gtfs$stops_df)
 
 stops_post <- post_sr_gtfs$stops_frequency_df
 
@@ -61,6 +62,5 @@ ggplot() +
   
 
 
-geom_sf(data = , color = "blue") +
-
-  geom_sf(data = post_srgtfs_stops_sf, color = "green")
+  #geom_sf(data = , color = "blue") + 
+  #geom_sf(data = post_sr_gtfs$stops_sf, color = "green")
