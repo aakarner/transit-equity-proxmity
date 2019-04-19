@@ -81,13 +81,13 @@ to_post_crs <- st_coordinates(to_post)
 walkdist_preSR <- dodgr_dists(graphtest, from_crs, to_pre_crs, wt_profile = "foot", expand = 0, 
                               heap = "BHeap", parallel = TRUE, quiet = TRUE)
 write.csv(walkdist_preSR, file = "walkdist_preSR_distmatrix.csv")
-walkdist_postSR <- dodgr_dists(graph, from_crs, to_post_crs, wt_profile = "foot", expand = 0, 
+walkdist_postSR <- dodgr_dists(graphtest, from_crs, to_post_crs, wt_profile = "foot", expand = 0, 
                               heap = "BHeap", parallel = TRUE, quiet = TRUE)
 write.csv(walkdist_postSR, file = "walkdist_postSR_distmatrix.csv")
 
 write.csv(harris_bg_cent, file = "harris_bg_cent_ref.csv")
-write.csv(pre_merged, file "preSR_stops.csv")
-write.csv(post_merged, file "postSR_stops.csv")
+write.csv(pre_merged, file = "preSR_stops.csv")
+write.csv(post_merged, file = "postSR_stops.csv")
 write.csv(harris_bg_cent_wgs_snap_t, file = "harris_bg_snapref.csv")
 write.csv(pre_merged_wgs_snap_t, file = "pre_SR_stops_snapref.csv")
 write.csv(post_merged_wgs_snap_t, file = "post_SR_stops_snapref.csv")
