@@ -175,13 +175,6 @@ walkdist_preSR <- dodgr_dists(graphtest, from_crs, to_pre_crs, wt_profile = "foo
 #write.csv(walkdist_preSR, file = "walkdist_preSR_distmatrix.csv")
 walkdist_postSR <- dodgr_dists(graphtest, from_crs, to_post_crs, wt_profile = "foot", expand = 0, 
                               heap = "BHeap", parallel = TRUE, quiet = TRUE)
-#write.csv(walkdist_postSR, file = "walkdist_postSR_distmatrix.csv")
-#write.csv(harris_bg_cent, file = "harris_bg_cent_ref.csv")
-#write.csv(pre_merged, file = "preSR_stops.csv")
-#write.csv(post_merged, file = "postSR_stops.csv")
-#write.csv(harris_bg_cent_wgs_snap_t, file = "harris_bg_snapref.csv")
-#write.csv(pre_merged_wgs_snap_t, file = "pre_SR_stops_snapref.csv")
-#write.csv(post_merged_wgs_snap_t, file = "post_SR_stops_snapref.csv")
 
 ##now want to find minimum path on matrix between each origin to nearest destination by id number and 
 ##then re-join these metrics with the original demographic information associated with each block group
@@ -199,12 +192,56 @@ post_df <- post_df[ -c(1:9883)]
 
 ##join minimum walk distance values back to census block group ACS data
 pre_df_join_acs <-inner_join(pre_df, harris_bg_wide, rownum)
-pre_df_join_acs
+###currently returns a list with over 100 duplicate rows of same column...working on eliminnating duplicate rows...
+post_df_join_acs <- inner_join(post_df, harris_bg_wide, rownum)
 
+##calculate population weighted mean walk distance to nearest transit stop by demographic group (before SR)
+pre_wm_walkdist_white <- weighted.mean(pre_df_join_acs$min, pre_df_join_acs$B03002_003, na.rm = FALSE)
+pre_wm_walkdist_black <- weighted.mean(pre_df_join_acs$min, pre_df_join_acs$B03002_004, na.rm = FALSE)
+pre_wm_walkdist_asian <- weighted.mean(pre_df_join_acs$min, pre_df_join_acs$B03002_006, na.rm = FALSE)
+pre_wm_walkdist_latin <- weighted.mean(pre_df_join_acs$min, pre_df_join_acs$B03002_012, na.rm = FALSE)
 
+##calculate population weighted mean walk distance to nearest transit stop by demographic group (after SR)
+post_wm_walkdist_white <- weighted.mean(post_df_join_acs$min, pre_df_join_acs$B03002_003, na.rm = FALSE)
+post_wm_walkdist_black <- weighted.mean(post_df_join_acs$min, pre_df_join_acs$B03002_004, na.rm = FALSE)
+post_wm_walkdist_asian <- weighted.mean(post_df_join_acs$min, pre_df_join_acs$B03002_006, na.rm = FALSE)
+post_wm_walkdist_latin <- weighted.mean(post_df_join_acs$min, pre_df_join_acs$B03002_012, na.rm = FALSE)
+
+##put into df to produce ggplot graph comparing the min. walkdist to bus stops by race before/after SR
+data_wm_walkdist <-c(pre_wm_walkdist_white, post_wm_walkdist_white, pre_wm_walkdist_black, post_wm_walkdist_black, 
+                     pre_wm_walkdist_asian, post_wm_walkdist_asian, pre_wm_walkdist_latin, post_wm_walkdist_latin)
+before_after_walkdist <-c('Before', 'After', 'Before', 'After', 'Before', 'After', 'Before', 'After')
+race_walkdist <-c('White', 'White', 'Black', 'Black', 'Asian', 'Asian', 'LatinX', 'LatinX')
+df_wm_walkdist <-data.frame(race_walkdist, before_after_walkdist, data_wm_walkdist)
+
+##test with dummy values
+test_data_wm_walkdist <-c(200, 100, 150, 175, 100, 105, 204, 280)
+test_before_after <-c('Before', 'After', 'Before', 'After', 'Before', 'After', 'Before', 'After')
+test_race <-c('White', 'White', 'Black', 'Black', 'Asian', 'Asian', 'LatinX', 'LatinX')
+test_df_wm_walkdist <-data.frame(test_race, test_before_after, test_data_wm_walkdist)
+
+library(ggplot2)
+# Basic barplot
+test_p<-ggplot(data=test_df_wm_walkdist, aes(x=test_race, y=test_data_wm_walkdist)) + geom_bar(stat="identity")
+test_p
+##test barplot
+test_plot_wm_walkdist <- barplot(test_df_wm_walkdist$test_data_wm_walkdist, names.arg = test_df_wm_walkdist$test_race, 
+                                 xlab = "Race", 
+                                 ylab = "Weighted Mean Walk Distance to Nearest Bus Stop (Meters?)", 
+                                 col = c("red","green"), 
+                                 main = "Weighted Average Walk Distance to Transit Race Before/After System Reimagining", 
+                                 border = "black",
+                                 ylim = c(0, 250))
+legend("topright", c("Before", "After"), fill = c("red", "green"))
+text(test_plot_wm_walkdist, test_df_wm_walkdist$test_data_wm_walkdist + 2*sign(test_df_wm_walkdist$test_data_wm_walkdist), 
+     labels=round(test_df_wm_walkdist$test_data_wm_walkdist, 2), xpd=TRUE)
+test_plot_wm_walkdist
+
+#####______________________________________Archive of Old Code below this line____________________________________________#####
 
 ##transform to wide dataset for demographic pwm calcs. (see https://uc-r.github.io/tidyr)
-pre_df_join_acs_wide <- spread(pre_df_join_acs, variable, estimate, fill = NA, convert = FALSE)
-wide <- reshape(pre_df_join_acs, v.names = "estimate", timevar = "variable", idvar = "estimate", direction = "wide")#select rows where pre_df_join_acs$variable = B03002_003
-preSR_pwm_white <- weighted.mean(pre_df_join_acs_wide$min, pre_df_join_acs_wide$B03002_002, na.rm=TRUE)
-write.csv(pre_df_join_acs_wide, file = "coltest.csv")
+###did not work
+#pre_df_join_acs_wide <- spread(pre_df_join_acs, variable, estimate, fill = NA, convert = FALSE)
+#wide <- reshape(pre_df_join_acs, v.names = "estimate", timevar = "variable", idvar = "estimate", direction = "wide")#select rows where pre_df_join_acs$variable = B03002_003
+#preSR_pwm_white <- weighted.mean(pre_df_join_acs_wide$min, pre_df_join_acs_wide$B03002_002, na.rm=TRUE)
+#write.csv(pre_df_join_acs_wide, file = "coltest.csv")
