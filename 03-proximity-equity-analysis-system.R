@@ -47,12 +47,14 @@ hlstatusvars <- c("B03002_003", # white alone
                   "B03002_004", # black alone
                   "B03002_006", # Asian
                   "B03002_012") # Hispanic or Latino
-
+##specifices geographies that cover the transit system service area
+metro_svc_area <- c("Harris County",
+                    "Fort Bend County")
 
 #white ONLY CALCULATIONS
 harris_trct_white <- get_acs(geography = "tract", variables = "B03002_003", 
                             state = "TX", year = 2015,
-                            county = "Harris County",
+                            county = metro_svc_area,
                             geometry = TRUE,
                             summary_var = "B03002_003") 
 

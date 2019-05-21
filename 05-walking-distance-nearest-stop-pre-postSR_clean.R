@@ -14,6 +14,7 @@ library(rgeos)
 ##start time counter
 tic("1")
 
+###Do not need to run the following code if you've already run 01-download-GTFS.R____###
 ## GTFS feeds obtained from transitfeeds.com
 ## The “before” dataset represents service from May 23, 2015 to August 15, 2015 
 ## and the “after” dataset represents service from August 16, 2015 to 
@@ -22,25 +23,26 @@ tic("1")
 ## https://www.ridemetro.org/Pages/Reimagining.aspx
 
 ##sets destination points pre SR as the stops in service on 5/17/2015
-pre_sr_gtfs <- read_gtfs("data/20150517_htx.zip", 
-                         local = TRUE,
-                         geometry = TRUE,
-                         frequency = TRUE)
-pts_destination_preSR <- st_coordinates (get_stop_geometry (pre_sr_gtfs$stops))
+#pre_sr_gtfs <- read_gtfs("data/20150517_htx.zip", 
+#                         local = TRUE,
+#                         geometry = TRUE,
+#                         frequency = TRUE)
 
 ##sets destination points post SR as the stops in service on 8/18/2015
-post_sr_gtfs <- read_gtfs("data/20150818_htx.zip", 
-                          local = TRUE,
-                          geometry = TRUE,
-                          frequency = TRUE)
+#post_sr_gtfs <- read_gtfs("data/20150818_htx.zip", 
+#                          local = TRUE,
+#                          geometry = TRUE,
+#                          frequency = TRUE)
+
+###__________________________________________________________________________________###
+
+##pull lat/long coordinates from all transit stops in pre & post SR GTFS feeds
+pts_destination_preSR <- st_coordinates (get_stop_geometry (pre_sr_gtfs$stops))
 pts_destination_postSR <- st_coordinates (get_stop_geometry (post_sr_gtfs$stops))
 
-##You must to run the following block of code replacing ADD_YOUR_CENSUS_KEY_HERE with a census
+##You must first run 01-CensusKey.R replacing ADD_YOUR_CENSUS_KEY_HERE with a census
 ##API key that can be obtained for free at http://api.census.gov/data/key_signup.html
-#Sys.setenv(CENSUS_KEY="ADD_YOUR_CENSUS_KEY_HERE")
-#readRenviron("~/.Renviron")
-#Sys.getenv("CENSUS_KEY")
-census_api_key("CENSUS_KEY")
+census_api_key(Sys.getenv("CENSUS_KEY"))
 
 ##specificies tables to pull down from census API (population totals by demographic group)
 hlstatusvars <- c("B03002_003", # white alone
@@ -106,9 +108,11 @@ tic("2")
 metro_streetnet <- dodgr_streetnet(metro_bg_bbox, quiet = FALSE)
 graph <- weight_streetnet (metro_streetnet, wt_profile = "foot")
 nrow(graph)
+
+###following line returns fatal error due to bug, so have commented out...
 ##simplifies street network to eliminiate dupliciative line segments to improve processing speed
-graph <- dodgr_contract_graph(graph)
-nrow(graph$graph)
+#graph <- dodgr_contract_graph(graph)
+#nrow(graph$graph)
 ##save street network to disk to speed up future processing speeds
 saveRDS(graph, file = "metro_streetnettx.rds")
 
@@ -117,8 +121,8 @@ toc("2") #529.12 seconds from tic("2")
 tic("3") #runtime counter for dodgr_dists() functions
 
 ##generate matrix of walk distnaces (in meters) from all origins to all destinations before/after SR
-d_preSR <- dodgr_dists (graph$graph, from = from, to = to_preSR)
-d_postSR <- dodgr_dists (graph$graph, from = from, to = to_postSR)
+d_preSR <- dodgr_dists (graph, from = from, to = to_preSR)
+d_postSR <- dodgr_dists (graph, from = from, to = to_postSR)
 toc("3") #approx. 6 minutes from tic("3")
 
 ##convert walk distance matricies into a dataframe to find the shortest distance from each census

@@ -72,6 +72,7 @@ before_after <-c('Before', 'After', 'Before', 'After', 'Before', 'After', 'Befor
 race <-c('White', 'White', 'Black', 'Black', 'Asian', 'Asian', 'LatinX', 'LatinX')
 
 final.data_bystop <-data.frame(race, before_after, data_wmh, data_wmd)
+final.data_bystop
 
 plot_wmh <- barplot(final.data_bystop$data_wmh, names.arg = final.data_bystop$race, xlab = "Race", 
                     ylab = "Weighted Mean Headway (Minutes)", 
