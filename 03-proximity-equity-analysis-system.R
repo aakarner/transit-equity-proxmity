@@ -9,24 +9,21 @@ library(maps)
 library(mapdata)
 library(tmaptools)
 
-census_api_key("CENSUS_KEY")
+###Before running, you must to run the 01-CensusKey.R replacing ADD_YOUR_CENSUS_KEY_HERE 
+###with a census API key that can be obtained for free at http://api.census.gov/data/key_signup.html
+census_api_key(Sys.getenv("CENSUS_KEY"))
 
-# GTFS feeds obtained from transitfeeds.com
-# The “before” dataset represents service from May 23, 2015 to August 15, 2015 
-# and the “after” dataset represents service from August 16, 2015 to 
-# January 23, 2016. 
-# More information about System Reimagining is available here: 
-# https://www.ridemetro.org/Pages/Reimagining.aspx
+###Do not need to run the following code if you've already run 01-download-GTFS.R____###
+#pre_sr_gtfs <- read_gtfs("data/20150517_htx.zip", 
+#                         local = TRUE,
+#                         geometry = TRUE,
+#                         frequency = TRUE)
+#post_sr_gtfs <- read_gtfs("data/20150818_htx.zip", 
+#                          local = TRUE,
+#                          geometry = TRUE,
+#                          frequency = TRUE)
 
-pre_sr_gtfs <- read_gtfs("data/20150517_htx.zip", 
-                         local = TRUE,
-                         geometry = TRUE,
-                         frequency = TRUE)
-
-post_sr_gtfs <- read_gtfs("data/20150818_htx.zip", 
-                          local = TRUE,
-                          geometry = TRUE,
-                          frequency = TRUE)
+###__________________________________________________________________________________###
 
 #standardize frequency for weekdays b/w 6am and 10pm before/after change
 pre_stop_freq <- get_stop_frequency(pre_sr_gtfs, start_hour = 6, end_hour = 22,
@@ -35,11 +32,11 @@ post_stop_freq <- get_stop_frequency(post_sr_gtfs, start_hour = 6, end_hour = 22
                                     dow = c(1,1,1,1,1,0,0), by_route=FALSE)
 
 #merge stop frequency df with stop spatial locations ($stops_sf) & draw 400 meter buffer
-pre_merged <- merge(pre_stop_freq$stops_sf, pre_stop_freq$stops_frequency_df, by = "stop_id")
+pre_merged <- merge(pre_stop_freq$.$stops_sf, pre_stop_freq$.$stops_frequency, by = "stop_id")
 pre_merged_t <- st_transform(pre_merged, 32139)
 pre_stop_buffer <- st_buffer(pre_merged_t, dist = 400)
 #mapview(pre_stop_buffer, add = "TRUE") #display pre stop buffers on leaflet
-post_merged <- merge(post_stop_freq$stops_sf, post_stop_freq$stops_frequency_df, by = "stop_id")
+post_merged <- merge(post_stop_freq$.$stops_sf, post_stop_freq$.$stops_frequency, by = "stop_id")
 post_merged_t <- st_transform(post_merged, 32139)
 post_stop_buffer <- st_buffer(post_merged_t, dist = 400)
 
@@ -224,5 +221,5 @@ barplot(final.data_popsums$pop_numeric,
         ylim = c(0,750000))
 legend("topleft", c("Before", "After"), fill = c("yellow", "pink"))
 
-#END OF SIMPLE PROXIMITY ANALYSIS
+#END OF SIMPLE SYSTEM-WIDE ACCESSIBILITY PROXIMITY ANALYSIS
 
