@@ -9,7 +9,6 @@ library(tidycensus)
 library(sf)
 library(ggplot2)
 library(ggthemes)
-census_api_key("3a277651e6ec078927e10356269269b3698a0cfa")
 
 # Define a map-appropriate ggplot theme
 # See: http://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html
