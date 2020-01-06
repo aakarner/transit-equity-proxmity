@@ -23,5 +23,3 @@ ggplot(routes) +
   coord_cartesian(xlim = c(15, 100)) + 
   theme_bw() + 
   theme(legend.position = "bottom", legend.title = element_blank())
-
-

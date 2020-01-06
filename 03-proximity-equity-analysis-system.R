@@ -61,8 +61,10 @@ harris_trct_white <- get_acs(geography = "tract", variables = "B03002_003",
 #add population density column
 harris_trct_white$pop_dens <- calc_densities(harris_trct_white, var = "summary_est")
 harris_trct_white
+
 #transform ACS data for proper geospatial references
 harris_trct_white_t <- st_transform(harris_trct_white, 32139)
+
 #intersect stop buffer geometries with ACS demographic data
 pre_stop_acs_int_white <- st_intersection(pre_stop_buffer, harris_trct_white_t)
 post_stop_acs_int_white <- st_intersection(post_stop_buffer, harris_trct_white_t)
@@ -70,8 +72,10 @@ post_stop_acs_int_white <- st_intersection(post_stop_buffer, harris_trct_white_t
 #add area attributes
 pre_stop_acs_int_white$area <- st_area(pre_stop_acs_int_white)
 pre_stop_acs_int_white$areakm2 <- pre_stop_acs_int_white$area/1000000
+
 post_stop_acs_int_white$area <- st_area(post_stop_acs_int_white)
 post_stop_acs_int_white$areakm2 <- post_stop_acs_int_white$area/1000000
+
 #get new total population estimate value for new area by adding column
 pre_stop_acs_int_white$pop_est_new <- pre_stop_acs_int_white$area*pre_stop_acs_int_white$pop_dens
 post_stop_acs_int_white$pop_est_new <- post_stop_acs_int_white$area*post_stop_acs_int_white$pop_dens

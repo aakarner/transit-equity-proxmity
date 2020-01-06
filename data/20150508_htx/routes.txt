@@ -1,0 +1,111 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+25905,,001,HOSPITAL,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/001-hosp.pdf,7A007A,FFFFFF
+25906,,002,BELLAIRE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/002-bell.pdf,7A007A,FFFFFF
+25907,,003,LANGLEY /  W. GRAY,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/003-langleywgray.pdf,7A007A,FFFFFF
+25908,,004,BEECHNUT,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/004-beech.pdf,7A007A,FFFFFF
+25909,,005,SOUTHMORE / KASHMERE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/005-kash.pdf,7A007A,FFFFFF
+25910,,006,JENSEN / TANGLEWOOD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/006-jensen.pdf,7A007A,FFFFFF
+25911,,008,SOUTH MAIN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/008-southmain.pdf,7A007A,FFFFFF
+25912,,009,N. MAIN / GULFTON,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/009-northmain.pdf,7A007A,FFFFFF
+25913,,010,WILLOWBEND,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/010-willowbend.pdf,7A007A,FFFFFF
+25914,,011,NANCE / ALMEDA,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/011-almeda.pdf,7A007A,FFFFFF
+25915,,014,HIRAM CLARKE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/014-hiram%20clarke.pdf,7A007A,FFFFFF
+25916,,018,KIRBY,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/018-kirby.pdf,7A007A,FFFFFF
+25917,,019,WILCREST CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/019-wilcrst.pdf,7A007A,FFFFFF
+25918,,020,LONG POINT / CANAL,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/020-canal.pdf,7A007A,FFFFFF
+25919,,023,CROSSTIMBERS CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/023-crosst.pdf,7A007A,FFFFFF
+25920,,024,NORTHLINE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/024-northline.pdf,7A007A,FFFFFF
+25921,,025,RICHMOND,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/025-richmond.pdf,7A007A,FFFFFF
+25922,,026,OUTER LOOP CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/026-outer.pdf,7A007A,FFFFFF
+25923,,027,INNER LOOP CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/027-inner.pdf,7A007A,FFFFFF
+25924,,029,TSU-UH/HIRSCH CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/029-tsu.pdf,7A007A,FFFFFF
+25925,,030,CULLEN / CLINTON,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/030-cullen.pdf,7A007A,FFFFFF
+25926,,032,RENWICK CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/032-renwick.pdf,7A007A,FFFFFF
+25927,,033,POST OAK CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/033-post.pdf,7A007A,FFFFFF
+25928,,034,MONTROSE CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/034-montrose.pdf,7A007A,FFFFFF
+25929,,036,KEMPWOOD / LAWNDALE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/036-kemp.pdf,7A007A,FFFFFF
+25930,,037,EL SOL CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/037-elsol.pdf,7A007A,FFFFFF
+25931,,038,MANCHESTER DOCK CIRCULATOR,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/038-Manchester.pdf,7A007A,FFFFFF
+25932,,040,TELEPHONE / PECORE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/040-Pecore-Telephone.pdf,7A007A,FFFFFF
+25933,,042,HOLMAN CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/042-holman.pdf,7A007A,FFFFFF
+25934,,044,ACRES HOMES LIMITED,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/044-acres.pdf,7A007A,FFFFFF
+25935,,045,TIDWELL CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/045-tidwell.pdf,7A007A,FFFFFF
+25936,,046,GESSNER,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/046-gessner.pdf,7A007A,FFFFFF
+25937,,047,HILLCROFT CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/047-hillcroft.pdf,7A007A,FFFFFF
+25938,,048,NAVIGATION,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/048-naviga.pdf,7A007A,FFFFFF
+25939,,049,CHIMNEY ROCK CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/049-chimney.pdf,7A007A,FFFFFF
+25940,,050,HARRISBURG / HEIGHTS,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/050-harrisburg.pdf,7A007A,FFFFFF
+25941,,052,SCOTT / HIRSCH,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/052-hirsch.pdf,7A007A,FFFFFF
+25942,,053,BRIAR FOREST LIMITED,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/053-briar.pdf,7A007A,FFFFFF
+25943,,056,AIRLINE LIMITED,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/056-air.pdf,7A007A,FFFFFF
+25944,,058,HAMMERLY,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/058-hammer.pdf,7A007A,FFFFFF
+25945,,059,ALDINE MAIL CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/059-aldine.pdf,7A007A,FFFFFF
+25946,,060,S. MACGREGOR,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/060-southmacgregor.pdf,7A007A,FFFFFF
+25947,,064,LINCOLN CITY,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/064-lincoln.pdf,7A007A,FFFFFF
+25948,,065,BISSONNET,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/065-bisson.pdf,7A007A,FFFFFF
+25949,,066,YALE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/066-yale.pdf,7A007A,FFFFFF
+25950,,067,DAIRY ASHFORD CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/067-dairy.pdf,7A007A,FFFFFF
+25951,,068,BRAYS BAYOU CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/068-brays.pdf,7A007A,FFFFFF
+25952,,070,MEMORIAL,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/070-memorial.pdf,7A007A,FFFFFF
+25953,,071,COTTAGE GROVE CIRCULATOR,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/071-cottage.pdf,7A007A,FFFFFF
+25954,,072,WESTVIEW CIRCULATOR,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/072-west.pdf,7A007A,FFFFFF
+25955,,073,BELLFORT CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/073-bellfort.pdf,7A007A,FFFFFF
+25956,,075,ELDRIDGE CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/075eldridge.pdf,000080,FFFFFF
+25957,,077,LIBERTY / M.L.K. LIMITED,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/077-liberty.pdf,7A007A,FFFFFF
+25958,,078,IRVINGTON / ALABAMA,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/078-alabama.pdf,7A007A,FFFFFF
+25959,,079,WEST LITTLE YORK,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/079-york.pdf,7A007A,FFFFFF
+25960,,080,LYONS / DOWLING,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/080-dowling.pdf,7A007A,FFFFFF
+25961,,081,WESTHEIMER/SHARPSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/081-westheimer-sharpstown.pdf,7A007A,FFFFFF
+25962,,082,WESTHEIMER/WEST OAKS,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/082-westheimer-west-oaks.pdf,7A007A,FFFFFF
+25963,,083,LEE RD. CIRCULATOR,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/083-lee.pdf,7A007A,FFFFFF
+25964,,085,ANTOINE LTD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/085-antoine.pdf,7A007A,FFFFFF
+25965,,086,F.M. 1960 CROSSTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/086-fm1960.pdf,7A007A,FFFFFF
+25966,,087,SUNNYSIDE / TMC,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/087-sunny.pdf,7A007A,FFFFFF
+25967,,088,HOBBY AIRPORT,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/088-hobby.pdf,7A007A,FFFFFF
+25968,,097,SETTEGAST SHUTTLE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/097-set.pdf,7A007A,FFFFFF
+25969,,098,BRIARGATE CIRCULATOR,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/098-briar.pdf,7A007A,FFFFFF
+25970,,102,BUSH IAH LTD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/102-iah.pdf,002800,FFFFFF
+25971,,108,VETERANS MEMORIAL LTD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/108-veterans.pdf,002800,FFFFFF
+25972,,131,MEMORIAL LTD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/131-memorial.pdf,002800,FFFFFF
+25973,,132,HARWIN LTD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/132-harwin.pdf,002800,FFFFFF
+25974,,137,NORTHSHORE LTD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/137-nshore.pdf,002800,FFFFFF
+25975,,163,FONDREN LTD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/163-fondren.pdf,002800,FFFFFF
+25976,,170,MISSOURI CITY EXPRESS,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/tmccorridor.pdf,002800,FFFFFF
+25977,,171,FORTBEND TOWN CENTER,,3,,002800,FFFFFF
+25978,,202,KUYKENDAHL,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/northcorridor.pdf,0000B3,FFFFFF
+25979,,204,SPRING,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/northcorridor.pdf,0000B3,FFFFFF
+25980,,209,KUYKENDAHL/SPRING P&R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/northcorridor.pdf,0000B3,FFFFFF
+25981,,212,SETON LAKE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/212-seton.pdf,0000B3,FFFFFF
+25982,,214,NORTHWEST STATION,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/nwcorridor.pdf,0000B3,FFFFFF
+25983,,216,WEST LITTLE YORK,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/nwcorridor.pdf,0000B3,FFFFFF
+25984,,217,CYPRESS PARK & RIDE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/nwcorridor.pdf,0000B3,FFFFFF
+25985,,219,NW STAT/W.L. YORK P&R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/nwcorridor.pdf,0000B3,FFFFFF
+25986,,221,KINGSLAND,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/katycorridor.pdf,0000B3,FFFFFF
+25987,,222,GRAND PARKWAY,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/katycorridor.pdf,0000B3,FFFFFF
+25988,,228,ADDICKS,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/katycorridor.pdf,0000B3,FFFFFF
+25989,,229,ADDICKS / KINGSLAND P&R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/katycorridor.pdf,0000B3,FFFFFF
+25990,,236,MAXEY P&R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/eastcorridor.pdf,0000B3,FFFFFF
+25991,,237,BAYTOWN P&R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/eastcorridor.pdf,0000B3,FFFFFF
+25992,,244,MONROE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/gulfcorridor.pdf,0000B3,FFFFFF
+25993,,246,BAY AREA,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/gulfcorridor.pdf,0000B3,FFFFFF
+25994,,247,FUQUA,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/gulfcorridor.pdf,0000B3,FFFFFF
+25995,,249,BAY AREA/FUQUA/MONROE P & R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/gulfcorridor.pdf,0000B3,FFFFFF
+25996,,255,KINGWOOD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/eastexcorridor.pdf,0000B3,FFFFFF
+25997,,256,EASTEX,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/eastexcorridor.pdf,0000B3,FFFFFF
+25998,,257,TOWNSEN P&R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/eastexcorridor.pdf,0000B3,FFFFFF
+25999,,259,KINGWOOD/TOWNSEN/EASTEX P&R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/eastexcorridor.pdf,0000B3,FFFFFF
+26000,,261,WEST LOOP,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/261-westloop.pdf,0000B3,FFFFFF
+26001,,262,WESTWOOD,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/swcorridor.pdf,0000B3,FFFFFF
+26002,,265,WEST BELLFORT,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/swcorridor.pdf,0000B3,FFFFFF
+26003,,269,W.BELLFORT/WESTWOOD P&R,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/swcorridor.pdf,0000B3,FFFFFF
+26004,,274,WESTCHASE/GESSNER,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/westparkcorridor.pdf,0000B3,FFFFFF
+26005,,283,KUYKENDAHL/GREENWAY-UPTOWN,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/gnwy-uptwn.pdf,0000B3,FFFFFF
+26006,,292,W.BELLFORT/WESTWOOD/T.M.C.,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/tmccorridor.pdf,0000B3,FFFFFF
+26007,,297,SOUTH POINT-MONROE/T.M.C.,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/tmccorridor.pdf,0000B3,FFFFFF
+26008,,298,ADDICKS-NWTC/T.M.C.,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/tmccorridor.pdf,0000B3,FFFFFF
+26015,,348,FOOD BANK SHUTTLE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/348-FoodBank.pdf,7A007A,FFFFFF
+26016,,402,QL BELLAIRE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/402-quicklinebellaire.pdf,800080,FFFFFF
+26017,,412,GREENLINK CIRCULATOR,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/412-greenlink.pdf,3E7E00,FFFFFF
+26135,,413,GREENLINK ORANGE ROUTE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/412-greenlink.pdf,FF6600,FFFFFF
+26018,,426,SWIFTLINE,,3,http://www.ridemetro.org/SchedulesMaps/Pdfs/426-swiftline.pdf,800080,FFFFFF
+27344,,700,METRORail Redline Northline,,0,http://www.ridemetro.org/SchedulesMaps/Pdfs/redline.pdf,EF0000,FFFFFF
